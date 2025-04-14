@@ -11,14 +11,16 @@ knowledge_base_collection = None
 
 def initialize_extensions():
     # initialize database
-    db.init(os.getenv("DATABASE_NAME"),
-            host=os.getenv("DATABASE_HOST"),
-            user=os.getenv("DATABASE_USER"),
-            password=os.getenv("DATABASE_PASSWORD"),
-            port=os.getenv("DATABASE_PORT"))
+    db.init("eduassistant-v3",
+            host="127.0.0.1",
+            user="postgres",
+            password="123456",
+            port="5432")
     
     # initialize chroma
     global chroma_client
-    chroma_client = PersistentClient(path=os.getenv("CHROMA_PERSIST_DIRECTORY"))
+    chroma_client = PersistentClient()
     global knowledge_base_collection
     knowledge_base_collection = chroma_client.get_or_create_collection("knowledge_base")
+
+# initialize_extensions()

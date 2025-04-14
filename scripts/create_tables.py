@@ -20,9 +20,9 @@ tables = [
             Chat, ChatMessage
         ]
 
-# db.drop_tables(tables)
-# db.create_tables(tables)
-#db.drop_tables([StudentAssignment])
-#db.create_tables([StudentAssignment])
-#db.create_tables([AssignmentKnowledgePoint, KnowledgeBaseKnowledgePoint])
-# db.create_tables([Chat, ChatMessage])
+db.drop_tables(tables)
+db.create_tables(tables)
+db.drop_tables([StudentAssignment])
+db.create_tables([StudentAssignment])
+db.create_tables([AssignmentKnowledgePoint, KnowledgeBaseKnowledgePoint])
+db.create_tables([Chat, ChatMessage])
